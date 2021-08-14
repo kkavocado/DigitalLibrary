@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".search"
+    android:background="@color/light_grey">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <FrameLayout
+           android:id="@+id/search_sec"
+           android:layout_width="350dp"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="30dp">
+
+           <androidx.appcompat.widget.SearchView
+               android:id="@+id/search"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:queryHint="Search Here"
+               app:iconifiedByDefault="false"
+               android:background="@color/white"
+               />
+       </FrameLayout>
+
+       <FrameLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/search_sec"
+           android:layout_marginTop="30dp">
+
+           <GridView
+               android:id="@+id/SearchGridView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:clickable="true"
+               android:fadingEdgeLength="0dp"
+               android:gravity="center"
+               android:horizontalSpacing="20dp"
+               android:numColumns="2"
+               android:overScrollMode="never"
+               android:padding="20dp"
+               android:verticalSpacing="20dp" />
+
+       </FrameLayout>
+
+   </RelativeLayout>
+
+</FrameLayout>
